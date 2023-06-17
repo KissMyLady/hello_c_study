@@ -1,0 +1,13 @@
+# 编辑器
+.vscode/
+.idea/
+.vs/
+
+
+# 编译文件
+cmake-build-debug/
+# CMakeLists.txt
+
+logs/**
+
+*.exe
