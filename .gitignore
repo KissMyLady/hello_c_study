@@ -3,6 +3,9 @@
 .idea/
 .vs/
 
+DS_Store/
+*.DS_Store
+*.dSYM/
 
 # 编译文件
 cmake-build-debug/

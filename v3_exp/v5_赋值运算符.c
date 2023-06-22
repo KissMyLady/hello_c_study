@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * 赋值运算符
+ * 赋值运算符 assignment
  */
 void test_1() {
     int a = 10;

@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * 数值溢出
+ * 数值溢出 overflow
  */
 void test_1() {
     char ch = 127;

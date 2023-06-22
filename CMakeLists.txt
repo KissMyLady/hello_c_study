@@ -14,20 +14,20 @@ endif()
 
 
 # 中文配置
-#set(count 1)
-## 遍历项目根目录下所有的 .cpp 文件
-#file (GLOB_RECURSE files *.c)
-#foreach (file ${files})
-#    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
-#    add_executable (output_${count} ${file})
-#    message (\ \ \ \ --\ src/${exe}.c\ will\ be\ compiled\ to\ bin/output_${count})
-#    math(EXPR count "${count}+1")
-#endforeach ()
-
-# 正常配置
+set(count 1)
+# 遍历项目根目录下所有的 .cpp 文件
 file (GLOB_RECURSE files *.c)
 foreach (file ${files})
     string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
-    add_executable (${exe} ${file})
-    message (\ \ \ \ --\ src/${exe}.c\ will\ be\ compiled\ to\ bin/${exe})
+    add_executable (output_${count} ${file})
+    message (\ \ \ \ --\ src/${exe}.c\ will\ be\ compiled\ to\ bin/output_${count})
+    math(EXPR count "${count}+1")
 endforeach ()
+
+# 正常配置
+#file (GLOB_RECURSE files *.c)
+#foreach (file ${files})
+#    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+#    add_executable (${exe} ${file})
+#    message (\ \ \ \ --\ src/${exe}.c\ will\ be\ compiled\ to\ bin/${exe})
+#endforeach ()
